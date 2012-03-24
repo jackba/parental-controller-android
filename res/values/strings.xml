@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Developed by Gihan Chanuka...</string>
+    <string name="app_name">Childroid-4.0.3</string>
+    <string name="smsreceivetopic">SMS receive from Parentdroid</string>
+    <string name="smsreceivetxt">Recieved SMS</string>
+    <string name="smssendtxt">Sent SMS</string>
+    <string name="mainButton">Default Button</string>
+    <string name="showmsgbutton">Show Sent Msg</string>
+    <string name="smssendbody">Sent msg</string>
+    <string name="smssendtopic">Sent sms</string>
+    <string name="sendemailbutton">Send Email</string>
+    <string name="mapviewtopic">Map View</string>
+    <string name="showchildlocation">Show Childroid Location</string>
+
+</resources>
