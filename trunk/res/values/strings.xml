@@ -13,5 +13,12 @@
     <string name="sendemailbutton">Send Email</string>
     <string name="mapviewtopic">Map View</string>
     <string name="showchildlocation">Show Childroid Location</string>
+     <string name="username">User Name</string>
+    <string name="usernametext">usernametext</string>
+    <string name="password">Password</string>
+    <string name="passwordtext">passwordtext</string>
+    <string name="usertype">User Type</string>
+    <string name="loginbutton">Login</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
