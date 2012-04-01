@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-
     <string name="hello">Developed by Gihan Chanuka...</string>
-    <string name="app_name">Childroid-4.0.3</string>
+    <string name="app_name">Parentdroid-4.0.3</string>
     <string name="smsreceivetopic">SMS receive from Parentdroid</string>
     <string name="smsreceivetxt">Recieved SMS</string>
     <string name="smssendtxt">Sent SMS</string>
@@ -13,12 +12,11 @@
     <string name="sendemailbutton">Send Email</string>
     <string name="mapviewtopic">Map View</string>
     <string name="showchildlocation">Show Childroid Location</string>
-     <string name="username">User Name</string>
+    <string name="username">User Name</string>
     <string name="usernametext">usernametext</string>
     <string name="password">Password</string>
     <string name="passwordtext">passwordtext</string>
     <string name="usertype">User Type</string>
     <string name="loginbutton">Login</string>
     <string name="cancel">Cancel</string>
-
 </resources>

@@ -1,5 +1,6 @@
 package parentalcontrol.parent.GUI;
 
+import parentalcontrol.parent.R;
 import parentalcontrol.parent.com.Internet.EmailSender;
 import android.app.Activity;
 import android.content.Intent;

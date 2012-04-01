@@ -1,5 +1,6 @@
 package parentalcontrol.parent.GUI;
 
+import parentalcontrol.parent.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -88,8 +89,8 @@ public class ParentdroidActivity extends Activity {
 		this.btmap = (Button) findViewById(R.id.buttonShowMap);
 		this.btmap.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
-				Intent l = new Intent(ParentdroidActivity.this,
-						MapViewActivity.class);
+				Log.d("parentdroid", "start map");
+				Intent l = new Intent(ParentdroidActivity.this,MapViewActivity.class);
 				startActivity(l);
 				
 				//startService(new Intent(getBaseContext(), MyService.class));
