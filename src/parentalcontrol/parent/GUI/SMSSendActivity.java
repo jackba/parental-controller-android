@@ -30,8 +30,5 @@ public class SMSSendActivity extends Activity {
 		}
 		msgbody.setText(sms);
 		
-		startService(new Intent(getBaseContext(), EmailSender.class));
-		
-		stopService(new Intent(getBaseContext(), EmailSender.class));
 	}
 }
