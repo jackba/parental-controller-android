@@ -1,5 +1,6 @@
 package parentalcontrol.parent.GUI;
 
+import parentalcontrol.parent.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
