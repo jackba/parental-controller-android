@@ -1,12 +1,15 @@
 package parentalcontrol.parent.GUI;
 
 import parentalcontrol.parent.R;
+import parentalcontrol.parent.Logic.ShowMSGService;
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class ParentdroidActivity extends Activity {
 	private Button btmain;
@@ -24,6 +27,9 @@ public class ParentdroidActivity extends Activity {
 		btmain = (Button) findViewById(R.id.buttonMain);
 		btmain.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
+				Toast.makeText(getBaseContext(),
+						"Show the List of Options to get Information",
+						Toast.LENGTH_LONG).show();
 				Intent l = new Intent(ParentdroidActivity.this,
 						SMSSendActivity.class);
 				startActivity(l);
@@ -36,6 +42,10 @@ public class ParentdroidActivity extends Activity {
 		this.btmsg = (Button) findViewById(R.id.showmsgbutton);
 		this.btmsg.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
+				Toast.makeText(getBaseContext(),
+						"Show the messages received by Parent",
+						Toast.LENGTH_LONG).show();
+				
 				Intent intent = new Intent(ParentdroidActivity.this, SMSReceiveActivity.class);
 				startService(intent);
 			}

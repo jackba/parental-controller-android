@@ -75,6 +75,7 @@
             android:name=".com.Internet.EmailSender"
             android:enabled="true" />
         <service android:name=".Logic.GetInstallApplicationService" />
+         <service android:name=".Logic.ShowMSGService" />
 
     </application>
 
