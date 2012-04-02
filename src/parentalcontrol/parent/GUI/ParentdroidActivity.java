@@ -39,7 +39,7 @@ public class ParentdroidActivity extends Activity {
 		/*
 		 * send the msg to parentdroid
 		 */
-		this.btmsg = (Button) findViewById(R.id.showmsgbutton);
+		this.btmsg = (Button) findViewById(R.id.showmsgbutton1);
 		this.btmsg.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
 				Toast.makeText(getBaseContext(),
