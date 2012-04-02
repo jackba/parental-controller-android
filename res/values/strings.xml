@@ -6,7 +6,7 @@
     <string name="smsreceivetxt">Recieved SMS</string>
     <string name="smssendtxt">Sent SMS</string>
     <string name="mainButton">Default Button</string>
-    <string name="showmsgbutton">Show Sent Msg</string>
+    <string name="showmsgbutton">Get Child Info</string>
     <string name="smssendbody">Sent msg</string>
     <string name="smssendtopic">Sent sms</string>
     <string name="sendemailbutton">Send Email</string>
@@ -19,4 +19,10 @@
     <string name="usertype">User Type</string>
     <string name="loginbutton">Login</string>
     <string name="cancel">Cancel</string>
+    <string name="getfromchild">Click to Get Info from Child</string>
+    <string name="labelchildnum">Child Number</string>
+    <string name="record">Record Call</string>
+    <string name="getphoto">Take Snapshot</string>
+    <string name="getrunningapps">Get Running Apps</string>
+    <string name="showsmsreceive">Show Receive SMS</string>
 </resources>

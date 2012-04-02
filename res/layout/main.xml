@@ -8,29 +8,17 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello" />
-
+
     <Button
         android:id="@+id/buttonMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mainButton" />
-
+        android:text="@string/showmsgbutton" />
+
     <Button
         android:id="@+id/showmsgbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/showmsgbutton" />
-
-    <Button
-        android:id="@+id/bSendMail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sendemailbutton" />
-
-    <Button
-        android:id="@+id/buttonShowMap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/showchildlocation" />
+        android:text="@string/showsmsreceive" />
 
 </LinearLayout>
