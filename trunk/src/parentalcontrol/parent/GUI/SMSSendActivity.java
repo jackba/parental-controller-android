@@ -1,9 +1,9 @@
 package parentalcontrol.parent.GUI;
 
 import parentalcontrol.parent.R;
-import parentalcontrol.parent.com.Internet.EmailSender;
 import android.app.Activity;
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SMSSendActivity extends Activity {
 
@@ -27,46 +28,67 @@ public class SMSSendActivity extends Activity {
 
 		showlocation.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
+				showNotification("location");
+				Toast.makeText(getBaseContext(),
+						"location",
+						Toast.LENGTH_LONG).show();
 				sendSMSParent(phonenum.getText().toString(), "parent:location");
 			}
 		});
 		getphoto.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
+				Toast.makeText(getBaseContext(),
+						"snapshot",
+						Toast.LENGTH_LONG).show();
+				showNotification("snapshot");
 				sendSMSParent(phonenum.getText().toString(), "parent:photo");
 			}
 		});
 		record.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
+				Toast.makeText(getBaseContext(),
+						"record",
+						Toast.LENGTH_LONG).show();
+				showNotification("record");
 				sendSMSParent(phonenum.getText().toString(), "parent:record");
 			}
 		});
 		runningapp.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View arg0) {
+				Toast.makeText(getBaseContext(),
+						"running applications",
+						Toast.LENGTH_LONG).show();
+				showNotification("running applications");
 				sendSMSParent(phonenum.getText().toString(), "parent:runningapps");
 			}
 		});
-		
-		Uri uriSMSURI = Uri.parse("content://sms/sent");
-		Cursor cur = getContentResolver().query(uriSMSURI, null, null, null,
-				null);
-		String sms = "";
-		while (cur.moveToNext()) {
-			phonenum.setText(cur.getString(2));
-			sms += "From :" + cur.getString(2) + " : " + cur.getString(12)
-					+ "\n";
-		}
 		
 	}
 	private void sendSMSParent(String smsNumberToSend, String smsTextToSend) {
 
 		SmsManager smsManager = SmsManager.getDefault();
 		try {
-			smsTextToSend += "Generated msg:\"" + smsTextToSend
-					+ "\"by childroid";
+			smsTextToSend += smsTextToSend;
 			smsManager.sendTextMessage(smsNumberToSend, null, smsTextToSend,
 					null, null);
 		} catch (IllegalArgumentException ix) {
 
 		}
+	}
+	private void showNotification(String message){
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage("Are you want to get "+message+" ?")
+		       .setCancelable(false)
+		       .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+		           public void onClick(DialogInterface dialog, int id) {
+		                
+		           }
+		       })
+		       .setNegativeButton("No", new DialogInterface.OnClickListener() {
+		           public void onClick(DialogInterface dialog, int id) {
+		                dialog.cancel();
+		           }
+		       });
+		AlertDialog alert = builder.create();
 	}
 }
